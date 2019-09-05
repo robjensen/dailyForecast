@@ -1,0 +1,25 @@
+{
+    "visual":{
+        "name":"sampleRHTMLVisual",
+        "displayName":"sampleRHTMLVisual",
+        "guid":"sampleRHTMLVisual93DE4F20C40A415BBEDD632DCF0C1CC0",
+        "visualClassName":"Visual",
+        "version":"1.0.0",
+        "description":"Test",
+        "supportUrl":"www.mckesson.com",
+        "gitHubUrl":""
+    },
+    "apiVersion":"2.6.0",
+    "author":{
+        "name":"Robert Jensen",
+        "email":"foo@bar.com"
+    },
+    "assets":{
+        "icon":"assets/icon.png"
+    },
+    "externalJS":null,
+    "style":"style/visual.less",
+    "capabilities":"capabilities.json",
+    "dependencies":"dependencies.json",
+    "stringResources":[]
+}
