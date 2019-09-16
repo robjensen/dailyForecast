@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "author": {"name":"Robert Jensen","email":"Robert.Jensen@mckesson.com"},
+    "resources": [
+        {
+            "resourceId": "rId0",
+            "sourceType": 5,
+            "file": "resources/dailyForecast37CCF68C0C98488FA56662385B251C3C.pbiviz.json"
+        }
+    ],
+    "visual": {"name":"dailyForecast","displayName":"Daily Forecast","guid":"dailyForecast37CCF68C0C98488FA56662385B251C3C","visualClassName":"Visual","version":"0.2.0","description":"Interactive Time-Series forecast","supportUrl":"http://www.mckesson.com","gitHubUrl":""},
+    "metadata": {
+        "pbivizjson": {
+            "resourceId": "rId0"
+        }
+    }  
+}

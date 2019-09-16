@@ -1,13 +1,69 @@
 {
   "dataRoles": [
     {
-      "displayName": "Values",
+      "displayName": "Dates",
+      "description": "List of all dates in the sample data set",
       "kind": "GroupingOrMeasure",
-      "name": "Values"
+      "name": "DateValues"
+    },
+    {
+      "displayName": "Daily volumes",
+      "description": "List of all volumes in the sample data set",
+      "kind": "GroupingOrMeasure",
+      "name": "VolumeValues"
+    },
+    {
+      "displayName": "Date filter",
+      "description": "Control to truncate recent transactions and recalculate the forecast",
+      "kind": "GroupingOrMeasure",
+      "name": "CalcFilter"
+    },
+    {
+      "displayName": "Month-end forecast",
+      "description": "Month-end forecast target",
+      "kind": "GroupingOrMeasure",
+      "name": "MonthForecast"
+    },
+    {
+      "displayName": "Month-end plan",
+      "description": "Month-end plan/budget target",
+      "kind": "GroupingOrMeasure",
+      "name": "MonthPlan"
+    },
+    {
+      "displayName": "Month-End filter",
+      "description": "Filter to either expose or hide month-end targets",
+      "kind": "GroupingOrMeasure",
+      "name": "MonthFilter"
     }
   ],
   "dataViewMappings": [
     {
+      "conditions": [
+        {
+          "DateValues": {
+            "max": 1
+          },
+          "SpecialDays": {
+            "max": 1
+          },
+          "VolumeValues": {
+            "max": 1
+          },
+          "CalcFilter": {
+            "max": 1
+          },
+          "MonthForecast": {
+            "max": 1
+          },
+          "MonthPlan": {
+            "max": 1
+          },
+          "MonthFilter": {
+            "max": 1
+          }
+        }
+      ],
       "scriptResult": {
         "dataInput": {
           "table": {
@@ -15,7 +71,32 @@
               "select": [
                 {
                   "for": {
-                    "in": "Values"
+                    "in": "DateValues"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "VolumeValues"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "CalcFilter"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "MonthForecast"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "MonthPlan"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "MonthFilter"
                   }
                 }
               ],
@@ -53,6 +134,266 @@
             "scripting": {
               "source": true
             }
+          }
+        }
+      }
+    },
+    "settings_model_params": {
+      "displayName": "Forecasting Model",
+      "description": "Forecasting Model",
+      "properties": {
+        "forecastmodel": {
+          "displayName": "Forecasting Model",
+          "description": "Forecasting Model",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "Daily",
+                "value": "daily"
+              },
+              {
+                "displayName": "Month-To-Date",
+                "value": "mtd"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "settings_tseries_params": {
+      "displayName": "Time Series Settings",
+      "description": "Time Series settings",
+      "properties": {
+        "lineColorActual": {
+          "displayName": "Actual line color",
+          "description": "Define color for actual historical data",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "lineWeightActual": {
+          "displayName": "Actual line weight",
+          "description": "Weight of line for actual historical data",
+          "type": {
+            "numeric": true
+          }
+        },
+        "lineColorModel": {
+          "displayName": "Forecast line color",
+          "description": "Define color for forecasted timeseries data",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "lineWeightModel": {
+          "displayName": "Forecast line weight",
+          "description": "Weight of line for forecasted timeseries data",
+          "type": {
+            "numeric": true
+          }
+        },
+        "conf1": {
+          "displayName": "Prediction level #1",
+          "description": "Prediction level #1",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "0.50",
+                "value": "0.5"
+              },
+              {
+                "displayName": "0.75",
+                "value": "0.75"
+              },
+              {
+                "displayName": "0.80",
+                "value": "0.8"
+              },
+              {
+                "displayName": "0.85",
+                "value": "0.85"
+              },
+              {
+                "displayName": "0.90",
+                "value": "0.9"
+              },
+              {
+                "displayName": "0.95",
+                "value": "0.95"
+              },
+              {
+                "displayName": "0.975",
+                "value": "0.975"
+              },
+              {
+                "displayName": "0.99",
+                "value": "0.99"
+              },
+              {
+                "displayName": "0.995",
+                "value": "0.995"
+              },
+              {
+                "displayName": "0.999",
+                "value": "0.999"
+              }
+            ]
+          }
+        },
+        "conf2": {
+          "displayName": "Prediction level #2",
+          "description": "Prediction level #2",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "0.50",
+                "value": "0.5"
+              },
+              {
+                "displayName": "0.75",
+                "value": "0.75"
+              },
+              {
+                "displayName": "0.80",
+                "value": "0.8"
+              },
+              {
+                "displayName": "0.85",
+                "value": "0.85"
+              },
+              {
+                "displayName": "0.90",
+                "value": "0.9"
+              },
+              {
+                "displayName": "0.95",
+                "value": "0.95"
+              },
+              {
+                "displayName": "0.975",
+                "value": "0.975"
+              },
+              {
+                "displayName": "0.99",
+                "value": "0.99"
+              },
+              {
+                "displayName": "0.995",
+                "value": "0.995"
+              },
+              {
+                "displayName": "0.999",
+                "value": "0.999"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "settings_forecast_params": {
+      "displayName": "Month-End Forecast Settings",
+      "description": "Forecast settings",
+      "properties": {
+        "lineColor": {
+          "displayName": "Line color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "weight": {
+          "displayName": "Line weight",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    },
+    "settings_plan_params": {
+      "displayName": "Month-End Plan Settings",
+      "description": "Plan settings",
+      "properties": {
+        "lineColor": {
+          "displayName": "Line color",
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "weight": {
+          "displayName": "Line weight",
+          "type": {
+            "numeric": true
+          }
+        }
+      }
+    },
+    "settings_axes_params": {
+      "displayName": "Axes",
+      "description": "Axes and labels settings",
+      "properties": {
+        "textSize": {
+          "displayName": "Labels size",
+          "type": {
+            "numeric": true
+          }
+        },
+        "sizeTicks": {
+          "displayName": "Size ticks",
+          "description": "Size ticks",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "4",
+                "value": "4"
+              },
+              {
+                "displayName": "6",
+                "value": "6"
+              },
+              {
+                "displayName": "8",
+                "value": "8"
+              },
+              {
+                "displayName": "10",
+                "value": "10"
+              },
+              {
+                "displayName": "12",
+                "value": "12"
+              },
+              {
+                "displayName": "14",
+                "value": "14"
+              },
+              {
+                "displayName": "16",
+                "value": "16"
+              },
+              {
+                "displayName": "18",
+                "value": "18"
+              },
+              {
+                "displayName": "20",
+                "value": "20"
+              }
+            ]
           }
         }
       }

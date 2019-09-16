@@ -1,18 +1,18 @@
 {
     "visual":{
-        "name":"sampleRHTMLVisual",
-        "displayName":"sampleRHTMLVisual",
-        "guid":"sampleRHTMLVisual93DE4F20C40A415BBEDD632DCF0C1CC0",
+        "name":"dailyForecast",
+        "displayName":"Daily Forecast",
+        "guid":"dailyForecast37CCF68C0C98488FA56662385B251C3C",
         "visualClassName":"Visual",
-        "version":"1.0.0",
-        "description":"Test",
-        "supportUrl":"www.mckesson.com",
+        "version":"0.2.0",
+        "description":"Interactive Time-Series forecast",
+        "supportUrl":"http://www.mckesson.com",
         "gitHubUrl":""
     },
     "apiVersion":"2.6.0",
     "author":{
         "name":"Robert Jensen",
-        "email":"foo@bar.com"
+        "email":"Robert.Jensen@mckesson.com"
     },
     "assets":{
         "icon":"assets/icon.png"

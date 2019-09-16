@@ -1,5 +1,11 @@
 {
   "name": "visual",
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\"  \"+(src|test)/**/*.ts\""
+  },
   "devDependencies": {
     "powerbi-visuals-utils-dataviewutils": "^2.2.1",
     "powerbi-visuals-api": "~2.6.1"

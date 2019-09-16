@@ -1,6 +1,111 @@
 {
   "cranPackages": [
     {
+      "name": "curl",
+      "displayName": "curl",
+      "url": "https://cran.r-project.org/web/packages/curl/index.html"
+    },
+    {
+      "name": "Rcpp",
+      "displayName": "Rcpp",
+      "url": "https://cran.r-project.org/web/packages/Rcpp/index.html"
+    },
+    {
+      "name": "zoo",
+      "displayName": "zoo",
+      "url": "https://cran.r-project.org/web/packages/zoo/index.html"
+    },
+    {
+      "name": "xts",
+      "displayName": "xts",
+      "url": "https://cran.r-project.org/web/packages/xts/index.html"
+    },
+    {
+      "name": "colorspace",
+      "displayName": "colorspace",
+      "url": "https://cran.r-project.org/web/packages/colorspace/index.html"
+    },
+    {
+      "name": "TTR",
+      "displayName": "TTR",
+      "url": "https://cran.r-project.org/web/packages/TTR/index.html"
+    },
+    {
+      "name": "scales",
+      "displayName": "scales",
+      "url": "https://cran.r-project.org/web/packages/scales/index.html"
+    },
+    {
+      "name": "munsell",
+      "displayName": "munsell",
+      "url": "https://cran.r-project.org/web/packages/munsell/index.html"
+    },
+    {
+      "name": "lazyeval",
+      "displayName": "lazyeval",
+      "url": "https://cran.r-project.org/web/packages/lazyeval/index.html"
+    },
+    {
+      "name": "plyr",
+      "displayName": "plyr",
+      "url": "https://cran.r-project.org/web/packages/plyr/index.html"
+    },
+    {
+      "name": "tibble",
+      "displayName": "tibble",
+      "url": "https://cran.r-project.org/web/packages/tibble/index.html"
+    },
+    {
+      "name": "rlang",
+      "displayName": "rlang",
+      "url": "https://cran.r-project.org/web/packages/rlang/index.html"
+    },
+    {
+      "name": "tseries",
+      "displayName": "tseries",
+      "url": "https://cran.r-project.org/web/packages/tseries/index.html"
+    },
+    {
+      "name": "forecast",
+      "displayName": "forecast",
+      "url": "https://cran.r-project.org/web/packages/forecast/index.html"
+    },
+    {
+      "name": "data.table",
+      "displayName": "data.table",
+      "url": "https://cran.r-project.org/web/packages/data.table/index.html"
+    },
+    {
+      "name": "dplyr",
+      "displayName": "dplyr",
+      "url": "https://cran.r-project.org/web/packages/dplyr/index.html"
+    },
+    {
+      "name": "bindrcpp",
+      "displayName": "Bind Rcpp",
+      "url": "https://cran.r-project.org/web/packages/bindrcpp/index.html"
+    },
+    {
+      "name": "glue",
+      "displayName": "glue",
+      "url": "https://cran.r-project.org/web/packages/glue/index.html"
+    },
+    {
+      "name": "purrr",
+      "displayName": "purrr",
+      "url": "https://cran.r-project.org/web/packages/purrr/index.html"
+    },
+    {
+      "name": "htmltools",
+      "displayName": "HTML Tools",
+      "url": "https://cran.r-project.org/web/packages/htmltools/index.html"
+    },
+    {
+      "name": "XML",
+      "displayName": "XML",
+      "url": "https://cran.r-project.org/web/packages/XML/index.html"
+    },
+    {
       "name": "ggplot2",
       "displayName": "GG Plot 2",
       "url": "https://cran.r-project.org/web/packages/ggplot2/index.html"
@@ -14,11 +119,6 @@
       "name": "htmlwidgets",
       "displayName": "HTML Widgets",
       "url": "https://cran.r-project.org/web/packages/htmlwidgets/index.html"
-    },
-    {
-      "name": "XML",
-      "displayName": "XML",
-      "url": "https://cran.r-project.org/web/packages/XML/index.html"
     }
   ]
 }
